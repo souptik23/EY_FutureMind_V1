@@ -2,7 +2,11 @@
 module.exports = {
   content: ["*.html"],
   theme: {
-    extend: {},
+    extend: {
+      transitionDuration: {
+        '2000': '2000ms',
+      }
+    },
   },
   plugins: [require('tailwindcss-motion')],
   plugins: [
