@@ -1106,6 +1106,22 @@ video {
   animation: wiggle var(--tw-animate-duration, 1s) var(--tw-animate-easing, ease) var(--tw-animate-delay, 0s) var(--tw-animate-iteration, 1) var(--tw-animate-fill, both);
 }
 
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up var(--tw-animate-duration, 1s) var(--tw-animate-easing, ease) var(--tw-animate-delay, 0s) var(--tw-animate-iteration, 1) var(--tw-animate-fill, both);
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -1237,6 +1253,10 @@ video {
 
 .overflow-y-auto {
   overflow-y: auto;
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
 }
 
 .text-ellipsis {
@@ -1957,6 +1977,11 @@ video {
   animation-timing-function: var(--tw-animate-easing);
 }
 
+.animate-ease-out {
+  --tw-animate-easing: cubic-bezier(0, 0, 0.2, 1);
+  animation-timing-function: var(--tw-animate-easing);
+}
+
 .placeholder\:text-slate-400::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(148 163 184 / var(--tw-text-opacity, 1));
@@ -2053,6 +2078,10 @@ video {
 
 .focus\:z-10:focus {
   z-index: 10;
+}
+
+.focus\:scroll-auto:focus {
+  scroll-behavior: auto;
 }
 
 .focus\:border-blue-600:focus {
@@ -2399,6 +2428,10 @@ video {
     --tw-space-y-reverse: 0;
     margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+  }
+
+  .md\:scroll-auto {
+    scroll-behavior: auto;
   }
 
   .md\:border-0 {
